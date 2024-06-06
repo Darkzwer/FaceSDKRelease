@@ -11,7 +11,7 @@ let package = Package(
             targets: ["FaceSDKBinaryTarget", "FaceSDKRelease",]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Darkzwer/CommonDepSwift.git", .exactItem("7.1.379")),
+        .package(url: "https://github.com/Darkzwer/CommonDepSwift.git", .exactItem("7.2.487")),
     ],
     targets: [
         .target(
@@ -20,7 +20,7 @@ let package = Package(
             ]),
         .binaryTarget(
             name: "FaceSDKBinaryTarget",
-            url: "https://pods.regulaforensics.com/FaceSDK/6.1.1746/FaceSDK-6.1.1746.zip",
-            checksum: "837035c93f8405be0ee65e9da720a73c76757a6fa79533958bd5c2318e3d9eee"),
+            url: "https://pods.regulaforensics.com/FaceSDK/6.1.1825/FaceSDK-6.1.1825.zip",
+            checksum: "9b313d81bf540035f0bcd059ec5612fe517fd841746225486f397c6c65a88719"),
     ]
 )
