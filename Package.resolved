@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RegulaCommonSwift",
+        "repositoryURL": "https://github.com/Darkzwer/CommonDepSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "1a3b743032b981c1203b376388370129376836ec",
+          "version": "7.1.379"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

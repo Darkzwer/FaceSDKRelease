@@ -1,28 +1,26 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "FaceSDKRelease",
+    name: "FaceSDK",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "FaceSDKRelease",
-            targets: ["FaceSDKRelease"]),
+            name: "FaceSDK",
+            targets: ["FaceSDKBinaryTarget", "FaceSDKRelease",]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/Darkzwer/CommonDepSwift.git", .exactItem("7.1.379")),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "FaceSDKRelease",
-            dependencies: []),
-        .testTarget(
-            name: "FaceSDKReleaseTests",
-            dependencies: ["FaceSDKRelease"]),
+            name: "FaceSDKRelease", dependencies: [
+                .product(name: "RegulaCommonSwift", package: "CommonDepSwift")
+            ]),
+        .binaryTarget(
+            name: "FaceSDKBinaryTarget",
+            url: "https://pods.regulaforensics.com/FaceSDK/6.1.1746/FaceSDK-6.1.1746.zip",
+            checksum: "837035c93f8405be0ee65e9da720a73c76757a6fa79533958bd5c2318e3d9eee"),
     ]
 )
